@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes | One Piece</title>
+
+
+</head>
+<body>
+
+<style>
+    
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#EAF7FF,#D6EEFF,#F7FAFC);
+    min-height:100vh;
+}
+
+
+
+header{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    background:rgba(255,255,255,.5);
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    z-index:100;
+}
+
+header h1{
+    color:#284B63;
+    font-size:32px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#284B63;
+    margin-left:30px;
+    font-weight:500;
+    transition:.4s;
+}
+
+nav a:hover{
+    color:#E9C46A;
+}
+
+
+
+
+.inicio{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:120px 8%;
+}
+
+.texto{
+    width:45%;
+}
+
+.texto h2{
+    font-size:70px;
+    color:#284B63;
+    margin-bottom:20px;
+}
+
+.texto p{
+    font-size:18px;
+    line-height:35px;
+    color:#4F5D75;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#E9C46A;
+    color:#284B63;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.4s;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(233,196,106,.4);
+}
+
+#oculto{
+    display:none;
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+
+
+.imagen{
+    width:450px;
+    height:550px;
+    background:white;
+    border-radius:40px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+
+
+.info{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:50px 8%;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:260px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#284B63;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#6B7280;
+}
+
+
+
+
+footer{
+    margin-top:80px;
+    background:#284B63;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+.personajes{
+    padding:140px 8% 80px;
+}
+
+.personajes h2{
+    text-align:center;
+    color:#284B63;
+    font-size:50px;
+    margin-bottom:60px;
+}
+
+.contenedor-personajes{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.personaje{
+    width:270px;
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.5s;
+}
+
+.personaje:hover{
+    transform:translateY(-10px);
+}
+
+.personaje img{
+    width:180px;
+    height:220px;
+    object-fit:contain;
+}
+
+.personaje h3{
+    margin-top:20px;
+    color:#284B63;
+}
+
+.personaje p{
+    margin-top:15px;
+    color:#5F6B7A;
+    line-height:28px;
+}
+
+
+.contacto{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:140px 8%;
+    gap:80px;
+}
+
+.texto-contacto{
+    width:45%;
+}
+
+.texto-contacto h2{
+    font-size:60px;
+    color:#284B63;
+    margin-bottom:20px;
+}
+
+.texto-contacto p{
+    color:#4F5D75;
+    font-size:18px;
+    line-height:35px;
+}
+
+.tarjeta-contacto{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.tarjeta-contacto:hover{
+    transform:translateY(-10px);
+}
+
+.tarjeta-contacto h3{
+    color:#284B63;
+    margin-bottom:10px;
+}
+
+.imagen-contacto{
+    width:500px;
+    height:600px;
+    background:white;
+    border-radius:40px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.imagen-contacto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+</style>
+<header>
+
+    <h1>🏴‍☠️ One Piece</h1>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+</header>
+
+<section class="personajes">
+
+    <h2>Tripulación y Aliados</h2>
+
+    <div class="contenedor-personajes">
+
+        <div class="personaje" id="luffy">
+            <p>Cargando Luffy...</p>
+        </div>
+
+        <div class="personaje" id="zoro">
+            <img src="Img/roronnoazoro.jpg">
+            <h3>Roronoa Zoro</h3>
+            <p>"Cazador de Piratas", es el espadachín de los Piratas del Sombrero de Paja y
+                 el primer miembro en unirse a Monkey D. Luffy</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/nami.jpg">
+            <h3>Nami</h3>
+            <p>Navegante experta y amante del dinero.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/sanji.jpg">
+            <h3>Sanji</h3>
+            <p>Cocinero de la tripulación y especialista en combate con piernas.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/chopper.jpg">
+            <h3>Tony Tony Chopper</h3>
+            <p>Médico de la tripulación y usuario de la Hito Hito no Mi.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/nico.jpg">
+            <h3>Nico Robin</h3>
+            <p>Arqueóloga y conocedora de los Poneglyphs.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/fraanki.jpg">
+            <h3>Franky</h3>
+            <p>Carpintero del Thousand Sunny y cyborg.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/brook.jpg">
+            <h3>Brook</h3>
+            <p>Músico de la tripulación y espadachín.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/jinben.jpg">
+            <h3>Jinbe</h3>
+            <p>Timonel de los Sombrero de Paja y hombre pez.</p>
+        </div>
+
+        <div class="personaje">
+            <img src="Img/ortgas.jpg">
+            <h3>Portgas D. Ace</h3>
+            <p>Hermano de Luffy y antiguo comandante de Barbablanca.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>🌊 One Piece World 2026</p>
+
+</footer>
+<script >
+function traducirLuffy(texto) {
+return "Capitán de los Sombrero de Paja y futuro Rey de los Piratas.";
+}
+
+fetch("https://api.jikan.moe/v4/characters/40")
+  .then(res => res.json())
+  .then(data => {
+
+    const p = data.data;
+
+    document.getElementById("luffy").innerHTML = `
+      <img src="${p.images.jpg.image_url}">
+      <h3>${p.name}</h3>
+      <p>${traducirLuffy(p.about)}</p>
+    `;
+
+  });
+</script>
+</body>
+</html>
